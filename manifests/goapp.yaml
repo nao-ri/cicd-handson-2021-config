@@ -3,6 +3,7 @@ kind: Deployment
 metadata:
   name: goapp-deployment
 spec:
+  replicas: 3
   selector:
     matchLabels:
       app: goapp
@@ -18,4 +19,3 @@ spec:
         - containerPort: 9090
       imagePullSecrets:
       - name: dockerconfigjson-github-com
-
